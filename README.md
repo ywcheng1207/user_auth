@@ -1,6 +1,6 @@
-## 這是一份在Express框架製作登入機制的練習
+## 這是一份配合 Express框架與MongoDB 製作登入機制的練習
 
-## 示意圖 [DEMO](https://user-auth-zzrt6z5xsq-de.a.run.app/)
+## [DEMO](https://user-auth-zzrt6z5xsq-de.a.run.app/)
 
 ![](./public/image/screenshot.JPG)
 
@@ -11,6 +11,7 @@
 - 伺服器拿到資料，開始比對內建的使用者名單
 - 如果帳號或密碼錯誤，就彈回登入頁並且提示是哪一項錯誤
 - 如果帳密組合正確，就進入welcome page，在此頁面上會顯示登入使用者的 firstName
+- 登入、登出功能 (登入之後會保存登入狀態)
 
 ## 測試帳號密碼如下
 
@@ -50,3 +51,4 @@ const users = [
 - express 4.18.2
 - express-handlebars 7.1.1
 - mongoose 7.4.2
+- cookie-parser 1.4.6
