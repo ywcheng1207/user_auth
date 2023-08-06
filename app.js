@@ -55,6 +55,11 @@ app.get('/welcome/:id', (req, res) => {
     .catch((error) => console.error(error))
 })
 
+app.post('/logout', (req, res) => {
+  res.clearCookie('userId')
+  res.redirect('/')
+})
+
 //
 app.listen(port, () => {
   console.log(`Express is running on http://localhost:${port}`)
