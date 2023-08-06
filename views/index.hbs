@@ -31,6 +31,11 @@
               </div>
             </div>
             <button class='btn btn-light border shadow-sm' type='submit'>Sign in</button>
+            {{#if message}}
+              <script>
+                alert('{{message}}');
+              </script>
+            {{/if}}
           </form>
         </div>
 
