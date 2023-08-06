@@ -25,12 +25,12 @@ app.post('/', (req, res) => {
     .lean()
     .then((account) => {
       if (!account) {
-        res.render('index', { message: '帳號不存在' })
+        res.render('index', { message: '帳號不存在！' })
       }
       if (account && account.password === password) {
         res.redirect(`/welcome/${account._id}`)
       } else {
-        res.render('index', { message: '密碼錯誤' })
+        res.render('index', { message: '密碼錯誤！' })
       }
     })
     .catch((error) => console.error(error))
